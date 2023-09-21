@@ -1,0 +1,154 @@
+* {
+    font-family: 'Helvetica Neue', arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+:root {
+    --radius-1: 6px;
+    --radius-2: 8px;
+    --radius-3: 10px;
+    --radius-4: 20px;
+    --radius-full: 50%;
+    --spacing-1: 4px;
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 20px;
+    --spacing-6: 24px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+
+.light-theme {
+    --primary-color: #5530ff;
+    --outline-color: #5530ff;
+    --color-on-primary: #ffffff;
+    --primary-container-color: #e4dfff;
+    --color-on-primary-container: #170065;
+    --secondary-color: #5f5c71;
+    --color-on-secondary: #ffffff;
+    --secondary-container-color: #e4dff9;
+    --color-on-secondary-container: #1b192c;
+    --tertiary-color: #7b5266;
+    --color-on-tertiary: #ffffff;
+    --tertiary-container-color: #ffd8e8;
+    --color-on-tertiary-container: #301122;
+    --error-color: #ba1a1a;
+    --color-on-error: #ffffff;
+    --error-container-color: rgb(255, 218, 214);
+    --color-on-error-container: rgb(65, 0, 2);
+    --success-color: rgb(26, 186, 26);
+    --color-on-success: #ffffff;
+    --success-container-color: rgb(218, 255, 214);
+    --color-on-success-container: #004102;
+    --warning-container-color: rgb(255, 248, 197);
+    --color-on-warning-container: rgb(65, 65, 0);
+    --border-color: rgb(120, 118, 128);
+    --border-variant-color: #c9c5d0;
+    --surface-color: #fffbff;
+    --color-on-surface: #1c1b1f;
+    --surface-variant-color: #e5e1ec;
+    --color-on-surface-variant: #47464f;
+    --card-color: #f6f0ff;
+    --light-surface-color: #f6f2f6;
+    --light-text-color: #1c1b1fab;
+}
+
+.dark-theme {
+    --primary-color: #c6bfff;
+    --outline-color: #8d7fff;
+    --color-on-primary: #29009f;
+    --primary-container-color: #3d00de;
+    --color-on-primary-container: #e4dfff;
+    --secondary-color: #c8c3dc;
+    --color-on-secondary: #302e41;
+    --secondary-container-color: #474459;
+    --color-on-secondary-container: #e4dff9;
+    --tertiary-color: #ecb8cf;
+    --color-on-tertiary: #482537;
+    --tertiary-container-color: #613b4e;
+    --color-on-tertiary-container: #ffd8e8;
+    --error-color: #ffb4ab;
+    --color-on-error: #690005;
+    --error-container-color: #93000a;
+    --color-on-error-container: #ffdad6;
+    --success-color: #b4ffab;
+    --color-on-success: #006905;
+    --success-container-color: rgb(0, 147, 10);
+    --color-on-success-container: rgb(218, 255, 214);
+    --warning-container-color: rgb(147, 142, 5);
+    --color-on-warning-container: rgb(255,248,197);
+    --border-color: #928f99;
+    --border-variant-color: #5f5d67;
+    --surface-color: #1c1b1f;
+    --color-on-surface: #e5e1e6;
+    --surface-variant-color: #47464f;
+    --color-on-surface-variant: #c9c5d0;
+    --card-color: #25242a;
+    --light-surface-color: #232226;
+    --light-text-color: #e5e1e6ab;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--light-surface-color);
+    color: var(--color-on-surface)
+}
+
+
+button:hover,
+a:hover,
+select:hover {
+    filter: brightness(0.92)
+}
+
+button:active,
+a:active,
+[type="checkbox"]:active,
+[type="radio"]:active {
+    filter: brightness(0.75);
+    transform: scale(0.97)
+}
+
+*:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: auto;
+}
+
+@media (pointer: fine) {
+
+    a:hover,
+    button:hover {
+        cursor: pointer
+    }
+}
+
+button {
+    font-family: inherit;
+    font-weight: bold;
+    height: 36px;
+    border: none;
+    font-size: 14px;
+    padding: 0 16px;
+    border-radius: var(--radius-1);
+    background-color: var(--surface-variant-color);
+    color: var(--color-on-surface-variant)
+}
+
+svg {
+    fill: current-color
+}
+
+
+div{
+    margin: 40px auto;
+    padding: var(--spacing-4);
+    border-radius: var(--radius-3);
+    background-color: var(--warning-container-color);
+    color: var(--color-on-warning-container)
+}
