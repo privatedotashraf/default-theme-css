@@ -1,1 +1,180 @@
-/**/
+
+:root {
+    --radius-1: 8px;
+    --radius-2: 10px;
+    --radius-3: 20px;
+    --radius-full: 50%;
+    --spacing-1: 4px;
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 20px;
+    --spacing-6: 24px;
+    --input-padding: 0 12px;
+    --button-padding: 0 16px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+
+.light-theme {
+    --primary-color: #5530ff;
+    --outline-color: #5530ff;
+    --color-on-primary: #ffffff;
+    --primary-container-color: #e4dfff;
+    --color-on-primary-container: #170065;
+    --secondary-color: #5f5c71;
+    --color-on-secondary: #ffffff;
+    --secondary-container-color: #e4dff9;
+    --color-on-secondary-container: #1b192c;
+    --tertiary-color: #7b5266;
+    --color-on-tertiary: #ffffff;
+    --tertiary-container-color: #ffd8e8;
+    --color-on-tertiary-container: #301122;
+    --error-color: #ba1a1a;
+    --color-on-error: #ffffff;
+    --error-container-color: #ffdad6;
+    --color-on-error-container: #410002;
+    --success-color: #1aba1a;
+    --color-on-success: #ffffff;
+    --success-container-color: #daffd6;
+    --color-on-success-container: #004102;
+    --warning-container-color: #fff8c5;
+    --color-on-warning-container: #414100;
+    --border-color: #787680;
+    --border-variant-color: #78768026;
+    --surface-color: #fffbff;
+    --color-on-surface: #1c1b1f;
+    --neutral-surface-color: rgb(246, 242, 246);
+    --background-surface-color: rgb(241, 237, 241);
+    --hover-on-surface-color: rgb(248, 244, 248);
+    --hover-on-neutral-surface-color: rgb(243, 239, 243);
+    --hover-on-background-surface-color: rgb(238, 234, 238);
+    --surface-variant-color: rgb(229, 225, 236);
+    --surface-variant-color-2: rgb(234, 230, 241);
+    --color-on-surface-variant: #47464f;
+    --card-color: rgb(246, 240, 255);
+    --hover-on-card-color: rgb(243, 237, 252);
+    --lighter-text-color: #1c1b1fab;
+}
+
+.dark-theme {
+    --primary-color: #c6bfff;
+    --outline-color: #8d7fff;
+    --color-on-primary: #29009f;
+    --primary-container-color: #3d00de;
+    --color-on-primary-container: #e4dfff;
+    --secondary-color: #c8c3dc;
+    --color-on-secondary: #302e41;
+    --secondary-container-color: #474459;
+    --color-on-secondary-container: #e4dff9;
+    --tertiary-color: #ecb8cf;
+    --color-on-tertiary: #482537;
+    --tertiary-container-color: #613b4e;
+    --color-on-tertiary-container: #ffd8e8;
+    --error-color: #ffb4ab;
+    --color-on-error: #690005;
+    --error-container-color: #93000a;
+    --color-on-error-container: #ffdad6;
+    --success-color: #b4ffab;
+    --color-on-success: #006905;
+    --success-container-color: rgb(0, 147, 10);
+    --color-on-success-container: rgb(218, 255, 214);
+    --warning-container-color: rgb(147, 142, 5);
+    --color-on-warning-container: rgb(255, 248, 197);
+    --border-color: #928f99;
+    --border-variant-color: #928f9933;
+    --surface-color: #1c1b1f;
+    --color-on-surface: #e5e1e6;
+    --neutral-surface-color: #111014;
+    --background-surface-color: #161519;
+    --hover-on-surface-color: #201f23;
+    --hover-on-neutral-surface-color: #151418;
+    --hover-on-background-surface-color: #1a191d;
+    --surface-variant-color: rgb(71, 70, 79);
+    --color-on-surface-variant: #c9c5d0;
+    --surface-variant-color-2: rgb(76, 75, 84);
+    --card-color: #25242a;
+    --hover-on-card-color: #29282e;
+    --lighter-text-color: #e5e1e6ab;
+}
+
+* {
+    font-family: 'Helvetica Neue', arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    caret-color: var(--outline-color);
+}
+
+body {
+    margin: 0;
+    padding: 48px 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-surface-color);
+    color: var(--color-on-surface)
+}
+*:focus{
+    outline: 1px solid var(--outline-color);
+}
+
+button:hover,
+a:hover {
+    opacity: 0.85;
+}
+
+button:active,
+a:active,
+[type="checkbox"]:active,
+[type="radio"]:active {
+    opacity: 0.5;
+    transform: scale(0.97)
+}
+
+*:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: auto;
+}
+
+@media (pointer: fine) {
+
+    a:hover,
+    button:hover {
+        cursor: pointer
+    }
+}
+
+button {
+    font-family: inherit;
+    font-weight: bold;
+    height: 36px;
+    margin: 6px 4px;
+    border: none;
+    font-size: 14px;
+    padding: 0 16px;
+    border-radius: 8px;
+    background-color: var(--surface-variant-color);
+    color: var(--color-on-surface-variant)
+}
+
+svg {
+    fill: current-color
+}
+
+
+input{
+    background-color: var(--surface-variant-color-2);
+    height: 36px;
+    border: 1px solid var(--border-variant-color);
+    border-radius: 8px;
+    padding: 8px 12px;
+    caret-color: var(--outline-color);
+    font-size: 14px;
+    color: var(--color-on-surface-variant);
+}
+
+
+::placeholder{
+    color: var(--lighter-text-color)
+}
+
